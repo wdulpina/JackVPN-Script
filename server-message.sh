@@ -14,6 +14,10 @@ cat > /etc/issue.net <<-END
 <br><font color='#000000'>=======================================</br></font>
 END
 
+cd /home/vps/public_html/
+mkdir jackvpn
+mv -v client.ovpn /home/vps/public_html/jackvpn/
+
 service ssh restart
 service openvpn restart
 cd
