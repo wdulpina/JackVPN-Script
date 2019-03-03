@@ -35,7 +35,7 @@ MYIP=$(wget -qO- ipv4.icanhazip.com);
 echo -e "\e[0m                                                             "
 echo -e "\e[36m =========================================================== "
 echo -e "\e[36m                   Server Installed Successfully            "
-echo -e "\e[36m           Download .ovpn: $MYIP:85/client.ovpn        "
+echo -e "\e[36m          Download .ovpn: $MYIP:85/jackvpn/client.ovpn        "
 echo -e "\e[36m        Server will automatically reboot every 12 Hours     "
 echo -e "\e[36m                                                            "
 echo -e "\e[36m\e[0m                    \e[41mJackVPN Server Script\e[49m             \e[36m"
