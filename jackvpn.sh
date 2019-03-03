@@ -28,3 +28,16 @@ echo "10 */12 * * * root /usr/local/bin/reboot_otomatis" > /etc/cron.d/reboot_ot
 echo "*/3 * * * *  root /usr/local/bin/user-auto-limit-script $max" > /etc/cron.d/user_auto_limit 
 
 autokill 2 
+
+MYIP=$(wget -qO- ipv4.icanhazip.com);
+
+echo -e "\e[0m                                                             "
+echo -e "\e[36m =========================================================== "
+echo -e "\e[36m                   Server Installed Successfully            "
+echo -e "\e[36m           Download .ovpn: $MYIP:85/client.ovpn        "
+echo -e "\e[36m        Server will automatically reboot every 12 Hours     "
+echo -e "\e[36m                                                            "
+echo -e "\e[36m\e[0m                  \e[41mJackVPN Server Script\e[49m             \e[36m"
+echo -e "\e[36m                   Modified By: Status404Error                   "
+echo -e "\e[36m============================================================="
+echo -e "\e[0m 
