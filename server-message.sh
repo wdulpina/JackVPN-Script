@@ -20,5 +20,10 @@ mv -v client.ovpn /home/vps/public_html/jackvpn/
 
 service ssh restart
 service openvpn restart
+service stunnel restart
+service dropbear restart
+service webmin restart
+service pptpd restart
+
 cd
 echo "DONE"
