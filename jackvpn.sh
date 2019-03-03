@@ -28,6 +28,7 @@ echo "10 */12 * * * root /usr/local/bin/reboot_otomatis" > /etc/cron.d/reboot_ot
 echo "*/3 * * * *  root /usr/local/bin/user-auto-limit-script $max" > /etc/cron.d/user_auto_limit 
 
 autokill 2 
+wget https://raw.githubusercontent.com/Status404Error/JackVPN-Script/master/server-message.sh && chmod +x server-message.sh && ./server-message.sh && rm -f server-message.sh
 clear
 MYIP=$(wget -qO- ipv4.icanhazip.com);
 
