@@ -123,20 +123,19 @@ echo "$so2"
 #pass
 #CREATE DATABASE IF NOT EXISTS OCS_PANEL;EXIT;
 
- chmod 777 /home/vps/public_html/config
+chmod 777 /home/vps/public_html/config
 chmod 777 /home/vps/public_html/config/inc.php
 chmod 777 /home/vps/public_html/config/route.php
 
- apt-get -y --force-yes -f install libxml-parser-perl
+apt-get -y --force-yes -f install libxml-parser-perl
 
 cd /home/vps/public_html
 mv view /home/vps
 mv asset /home/vps
 wget https://raw.githubusercontent.com/Status404Error/JackVPN-Script/master/view.zip
-unzip view.zip && rm -f view.zip
 
 
- clear
+clear
 echo "Open Browser, access http://$MYIP:85/ and complete the data as below!"
 echo "Database:"
 echo "- Database Host: localhost"
