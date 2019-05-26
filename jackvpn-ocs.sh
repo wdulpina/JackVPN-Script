@@ -83,10 +83,10 @@ echo "$so1"
 #Y
 #Y
 
- chown -R mysql:mysql /var/lib/mysql/
+chown -R mysql:mysql /var/lib/mysql/
 chmod -R 755 /var/lib/mysql/
 
- apt-get -y install nginx php5 php5-fpm php5-cli php5-mysql php5-mcrypt
+apt-get -y install nginx php5 php5-fpm php5-cli php5-mysql php5-mcrypt
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
 mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.backup 
@@ -96,7 +96,7 @@ wget -O /etc/nginx/conf.d/vps.conf "http://script.hostingtermurah.net/repo/blog/
 sed -i 's/cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g' /etc/php5/fpm/php.ini 
 sed -i 's/listen = \/var\/run\/php5-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php5/fpm/pool.d/www.conf
 
- useradd -m vps
+useradd -m vps
 mkdir -p /home/vps/public_html
 rm /home/vps/public_html/index.html
 echo "<?php phpinfo() ?>" > /home/vps/public_html/info.php
@@ -105,7 +105,7 @@ chmod -R g+rw /home/vps/public_html service php5-fpm restart
 service php5-fpm restart
 service nginx restart
 
- apt-get -y install zip unzip
+apt-get -y install zip unzip
 cd /home/vps/public_html
 wget https://raw.githubusercontent.com/Status404Error/JackVPN-Script/master/EZ.zip
 unzip EZ.zip
@@ -128,12 +128,6 @@ chmod 777 /home/vps/public_html/config/inc.php
 chmod 777 /home/vps/public_html/config/route.php
 
 apt-get -y --force-yes -f install libxml-parser-perl
-
-cd /home/vps/public_html
-mv view /home/vps
-mv asset /home/vps
-wget https://raw.githubusercontent.com/Status404Error/JackVPN-Script/master/view.zip
-
 
 clear
 echo "Open Browser, access http://$MYIP:85/ and complete the data as below!"
