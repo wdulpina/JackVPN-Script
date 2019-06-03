@@ -134,8 +134,14 @@ mv asset /home/vps
 wget https://raw.githubusercontent.com/Status404Error/JackVPN-Script/master/view.zip
 unzip view.zip && rm -f view.zip
 
+cd /etc/nginx/conf.d
+rm -f vps.conf
+wget https://raw.githubusercontent.com/Status404Error/JackVPN-Script/master/vps.conf
+cd
+service nginx restart
+
 clear
-echo "Open Browser, access http://$MYIP:85/ and complete the data as below!"
+echo "Open Browser, access http://$MYIP/ and complete the data as below!"
 echo "Database:"
 echo "- Database Host: localhost"
 echo "- Database Name: $DatabaseName"
