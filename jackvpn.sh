@@ -30,6 +30,13 @@ echo "*/3 * * * *  root /usr/local/bin/user-auto-limit-script $max" > /etc/cron.
 autokill 2 
 wget https://raw.githubusercontent.com/Status404Error/JackVPN-Script/master/server-message.sh && chmod +x server-message.sh && ./server-message.sh && rm -f server-message.sh
 clear
+cd /etc
+rm -f issue.net
+wget https://raw.githubusercontent.com/Status404Error/JackVPN-Script/master/issue.net
+cd
+service ssh restart
+
+clear
 MYIP=$(wget -qO- ipv4.icanhazip.com);
 
 echo -e "\e[0m                                                             "
