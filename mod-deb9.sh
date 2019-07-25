@@ -510,8 +510,8 @@ apt-get install -y libxml-parser-perl
 vnstat -u -i eth0
 apt-get -y autoremove
 chown -R www-data:www-data /home/vps/public_html
-service nginx start
-service php7.0-fpm start
+service nginx restart
+service php7.0-fpm restart
 service vnstat restart
 service openvpn restart
 service dropbear restart
@@ -562,4 +562,4 @@ echo "   - Webmin                  : http://$MYIP:10000/"  | tee -a log-install.
 echo ""
 echo "------------------------------ Script by FordSenpai -----------------------------"
 echo "-----Please Reboot your VPS -----"
-sleep 5
+sleep 8
