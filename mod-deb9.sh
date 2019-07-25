@@ -195,9 +195,6 @@ END
 systemctl start openvpn@server
 
 #Change OpenVPN Certificate
-wget https://raw.githubusercontent.com/status404error/JackVPN-Script/master/cert.sh
-chmod +x cert.sh
-./cert.sh
 
 #Create OpenVPN Config
 mkdir -p /home/vps/public_html
