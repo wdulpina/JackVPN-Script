@@ -511,6 +511,7 @@ service nginx restart
 service php7.0-fpm restart
 service vnstat restart
 service openvpn restart
+service stunnel restart
 service dropbear restart
 service fail2ban restart
 service squid restart
