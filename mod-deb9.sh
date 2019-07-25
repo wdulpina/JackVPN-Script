@@ -1,5 +1,5 @@
 #!/bin/sh
-#Script by FordSenpai
+#Script by Status404Error
 
 wget -O - https://swupdate.openvpn.net/repos/repo-public.gpg|apt-key add -
 sleep 2
@@ -108,7 +108,7 @@ refresh_pattern ^ftp: 1440 20% 10080
 refresh_pattern ^gopher: 1440 0% 1440
 refresh_pattern -i (/cgi-bin/|\?) 0 0% 0
 refresh_pattern . 0 20% 4320
-visible_hostname FordSenpai
+visible_hostname Status404Error
 END
 sed -i $MYIP2 /etc/squid/squid.conf;
 
@@ -126,13 +126,13 @@ mkdir /etc/openvpn/easy-rsa/keys
 
 # replace bits
 sed -i 's|export KEY_COUNTRY="US"|export KEY_COUNTRY="PH"|' /etc/openvpn/easy-rsa/vars
-sed -i 's|export KEY_PROVINCE="CA"|export KEY_PROVINCE="Tarlac"|' /etc/openvpn/easy-rsa/vars
-sed -i 's|export KEY_CITY="SanFrancisco"|export KEY_CITY="Concepcion"|' /etc/openvpn/easy-rsa/vars
-sed -i 's|export KEY_ORG="Fort-Funston"|export KEY_ORG="JohnFordTV"|' /etc/openvpn/easy-rsa/vars
-sed -i 's|export KEY_EMAIL="me@myhost.mydomain"|export KEY_EMAIL="exodia090@gmail.com"|' /etc/openvpn/easy-rsa/vars
-sed -i 's|export KEY_OU="MyOrganizationalUnit"|export KEY_OU="FordSenpai"|' /etc/openvpn/easy-rsa/vars
-sed -i 's|export KEY_NAME="EasyRSA"|export KEY_NAME="FordSenpai"|' /etc/openvpn/easy-rsa/vars
-sed -i 's|export KEY_OU=changeme|export KEY_OU=FordSenpai|' /etc/openvpn/easy-rsa/vars
+sed -i 's|export KEY_PROVINCE="CA"|export KEY_PROVINCE="Davao De Sur"|' /etc/openvpn/easy-rsa/vars
+sed -i 's|export KEY_CITY="SanFrancisco"|export KEY_CITY="Davao City"|' /etc/openvpn/easy-rsa/vars
+sed -i 's|export KEY_ORG="Fort-Funston"|export KEY_ORG="Vmodz-Status404Error"|' /etc/openvpn/easy-rsa/vars
+sed -i 's|export KEY_EMAIL="me@myhost.mydomain"|export KEY_EMAIL="kerobby.vmodz@gmail.com"|' /etc/openvpn/easy-rsa/vars
+sed -i 's|export KEY_OU="MyOrganizationalUnit"|export KEY_OU="Team Vmodz"|' /etc/openvpn/easy-rsa/vars
+sed -i 's|export KEY_NAME="EasyRSA"|export KEY_NAME="Status404Error"|' /etc/openvpn/easy-rsa/vars
+sed -i 's|export KEY_OU=changeme|export KEY_OU=Status404Error|' /etc/openvpn/easy-rsa/vars
 #Create Diffie-Helman Pem
 openssl dhparam -out /etc/openvpn/dh1024.pem 1024
 # Create PKI
@@ -203,8 +203,8 @@ chmod +x cert.sh
 mkdir -p /home/vps/public_html
 cat > /home/vps/public_html/tupromo.ovpn <<-END
 
-# Created by FordSenpai
-# https://fb.me/johndesu090
+# Created by Status404Error
+# https://www.facebook.com/vmodz.freenet/
 auth-user-pass
 client
 dev tun
@@ -238,8 +238,8 @@ echo '</ca>' >> /home/vps/public_html/tupromo.ovpn
 
 cat > /home/vps/public_html/noload.ovpn <<-END
 
-# Created by FordSenpai
-# https://fb.me/johndesu090
+# Created by Status404Error
+# https://www.facebook.com/vmodz.freenet/
 auth-user-pass
 client
 dev tun
@@ -270,8 +270,8 @@ echo '</ca>' >> /home/vps/public_html/noload.ovpn
 
 cat > /home/vps/public_html/fixplan.ovpn <<-END
 
-# Created by FordSenpai
-# https://fb.me/johndesu090
+# Created by Status404Error
+# https://www.facebook.com/vmodz.freenet/
 auth-user-pass
 client
 dev tun
@@ -307,8 +307,8 @@ echo '</ca>' >> /home/vps/public_html/fixplan.ovpn
 
 cat > /home/vps/public_html/gowatchplay.ovpn <<-END
 
-# Created by FordSenpai
-# https://fb.me/johndesu090
+# Created by Status404Error
+# https://www.facebook.com/vmodz.freenet/
 auth-user-pass
 client
 dev tun
@@ -346,7 +346,7 @@ echo '</ca>' >> /home/vps/public_html/gowatchplay.ovpn
 
 cat > /home/vps/public_html/OpenVPN-SSL.ovpn <<-END
 
-# Created by FordSenpai
+# Created by Status404Error
 auth-user-pass
 client
 dev tun
@@ -530,7 +530,8 @@ echo "Installation has been completed!!"
 echo " Please Reboot your VPS"
 echo "--------------------------- Configuration Setup Server -------------------------"
 echo "                       Debian Script HostingTermurah Based                      "
-echo "                                 -FordSenpai-                                   "
+echo "                                 -Status404Error-                                   "
+echo "                                Credits: FordSenpai                                   "
 echo "--------------------------------------------------------------------------------"
 echo ""  | tee -a log-install.txt
 echo "Server Information"  | tee -a log-install.txt
@@ -560,6 +561,6 @@ echo "   - Installation Log        : cat /root/log-install.txt"  | tee -a log-in
 echo ""  | tee -a log-install.txt
 echo "   - Webmin                  : http://$MYIP:10000/"  | tee -a log-install.txt
 echo ""
-echo "------------------------------ Script by FordSenpai -----------------------------"
+echo "------------------------------ Script by Status404Error -----------------------------"
 echo "-----Please Reboot your VPS -----"
 sleep 8
