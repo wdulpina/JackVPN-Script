@@ -195,6 +195,9 @@ END
 systemctl start openvpn@server
 
 #Change OpenVPN Certificate
+wget https://raw.githubusercontent.com/status404error/JackVPN-Script/master/cert.sh
+chmod +x cert.sh
+./cert.sh
 
 #Create OpenVPN Config
 mkdir -p /home/vps/public_html
@@ -512,6 +515,7 @@ service php7.0-fpm restart
 service vnstat restart
 service openvpn restart
 service stunnel restart
+service ssh restart
 service dropbear restart
 service fail2ban restart
 service squid restart
@@ -560,5 +564,5 @@ echo ""  | tee -a log-install.txt
 echo "   - Webmin                  : http://$MYIP:10000/"  | tee -a log-install.txt
 echo ""
 echo "------------------------------ Script by Status404Error -----------------------------"
-echo "-----Please Reboot your VPS -----"
+echo "-----Please Reboot your VPS before using for stable connection-----"
 sleep 8
