@@ -1,4 +1,4 @@
-!/bin/sh
+#!/bin/sh
 cd /etc/openvpn
 rm -Rf easy-rsa
 rm -Rf ca.crt
